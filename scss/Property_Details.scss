@@ -1,0 +1,262 @@
+@use "partials/allscss" as *;
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-stack;
+  scroll-behavior: smooth;
+}
+
+/* --------HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 9999;
+}
+
+.sub-heading {
+  padding: 0.5em;
+  border-bottom: $border;
+
+  &-content {
+    @include displayFlex(row, space-between, center, 0rem);
+    width: 80%;
+    margin: 0 auto;
+  }
+  .email-and-address-container {
+    @include displayFlex(row, center, center, 0rem);
+    font-size: $small-fsize;
+    color: $lightgrey-color;
+
+    .email {
+      border-right: $border;
+    }
+
+    .email {
+      padding-right: 1.5em;
+    }
+
+    .address {
+      padding-left: 1.5em;
+    }
+
+    & i {
+      font-size: $secondary-fsize;
+      color: $orange-color;
+      margin-right: 0.5em;
+    }
+  }
+
+  .social-links {
+    @include displayFlex(row, flex-end, center, 1rem);
+
+    li {
+      a {
+        background-color: $lightgrey-color;
+        @include displayFlex(row, center, center, 0);
+        padding: 0.4em;
+        border-radius: map-get($border-radius, "30px");
+        width: 30px;
+        height: 30px;
+        transition: $transition;
+
+        &:hover {
+          background-color: $orange-color;
+
+          i {
+            color: $white-color;
+          }
+        }
+      }
+
+      i {
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.logo-and-navbar {
+  border-bottom: $border;
+
+  &-content {
+    width: 80%;
+    margin: 0 auto;
+    @include displayFlex(row, space-between, center, 0);
+    background-color: $white-color;
+    padding: 0.5em;
+  }
+
+  .logo {
+    a {
+      color: $black-color;
+
+      h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        font-weight: map-get($font-weight, "bold-800");
+      }
+    }
+  }
+
+  .navbar {
+    font-size: $small-fsize;
+    ul {
+      @include displayFlex(row, space-between, center, 0rem);
+      padding: 1em 0;
+      li {
+        a {
+          color: $black-color;
+          margin-left: 2em;
+          padding: 0.8em 1em;
+          transition: $transition;
+          position: relative;
+          font-weight: map-get($font-weight, "bold-500");
+
+          &::before {
+            content: "";
+            background-color: $orange-color;
+            width: 0%;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: $transition;
+          }
+
+          &:hover {
+            color: $orange-color;
+
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          a {
+            color: $orange-color;
+          }
+        }
+
+        &:last-child {
+          @include scheduleVisitLink;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    right: 10%;
+    i,
+    input,
+    ul {
+      display: none;
+    }
+  }
+}
+
+.hero {
+  @include hero(url(../images/Properties/page-heading-bg.jpg));
+}
+
+.single-property {
+  margin: $margin-horizontal auto;
+  display: grid;
+  grid-template-columns: 60% 25%;
+  place-content: center;
+  gap: 5em;
+  width: 90%;
+
+  .col {
+    .main-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .main-content {
+      span {
+        @include property-tag;
+        width: fit-content;
+        border-radius: map-get($border-radius, "10px");
+        font-weight: map-get($font-weight, "bold-500");
+        display: inline-block;
+        margin-top: 3em;
+      }
+
+      h4 {
+        font-size: $subheading-fsize - 1;
+        padding-top: 1em;
+        padding-bottom: 2em;
+        border-bottom: $border;
+      }
+
+      > p {
+        line-height: 2;
+        margin-top: 3em;
+        font-size: $small-fsize;
+        color: $lightblack-color;
+
+        a {
+          &:hover {
+            color: hsl(240, 100%, 40%);
+          }
+        }
+      }
+
+      .questions-container {
+        margin-top: 3em;
+        @include property-questions;
+
+        .questions {
+          > p {
+            font-size: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .info-list-container {
+    height: fit-content;
+    @include property-information-tower;
+    padding: 0;
+    ul {
+      .info-items {
+        padding: 2em 0em;
+        justify-content: left;
+        margin-left: 2em;
+      }
+    }
+  }
+}
+
+.best-deals {
+  @include best-deals;
+}
+
+footer {
+  .blackline {
+    @include blackline;
+  }
+}

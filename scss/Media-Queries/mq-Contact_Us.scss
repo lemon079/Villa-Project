@@ -1,0 +1,91 @@
+@use "../partials/allscss" as *;
+
+/* FOR dropdown of all breakpoints of this web-page*/
+.logo-and-navbar {
+  .dropdown ul > li:nth-child(4) {
+    a {
+      color: $pink-color;
+    }
+  }
+}
+
+@media (0px <= width < 992px) {
+  .contact-us {
+    display: flex;
+    margin: $margin-horizontal auto;
+    flex-direction: column;
+    gap: 2em;
+    .content {
+      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      .heading {
+        width: 90%;
+      }
+      .phone-email {
+        min-width: 295px;
+        gap: 2em;
+      }
+    }
+  }
+}
+
+@media (0px <= width < 768px) {
+  .contact-us {
+    width: 540px;
+  }
+}
+
+@media (768px <= width < 992px) {
+  .contact-us,
+  .map {
+    width: 720px;
+  }
+}
+
+@media (992px <= width < 1200px) {
+  .contact-us,
+  .map {
+    width: 960px;
+  }
+
+  .contact-us {
+    grid-template-columns: 51% 45%;
+    .content {
+      grid-template-rows: 30% 30% 40%;
+      .heading {
+        width: 70%;
+      }
+
+      .phone-email {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media (1200px <= width <= 1400px) {
+  .contact-us,
+  .map {
+    max-width: 1030px;
+    .content {
+      .heading {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media (1400px <= width) {
+  .contact-us,
+  .map {
+    width: 1250px;
+    .content {
+      grid-template-rows: 25% 20% 40%;
+      .heading {
+        width: 55%;
+      }
+    }
+  }
+}

@@ -1,0 +1,499 @@
+/* FONT COLORS */
+/* Font Family */
+/* FONT SIZES */
+/* FONT BOLD */
+/* Border */
+/* MARGIN BETWEEN EACH SECTION */
+/* BOX SHADOW OF CONTAINERS */
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+/* FLEX-BOX SNIPPIT */
+/* HEADINGS SNIPPIT */
+/* SCHEDULE A VISIT. LINK SNIPPIT */
+/* RADIO-BUTTONS */
+/* TYPE OF PROPERTY */
+/* PROPERTY CARDS/BOXES */
+/* FULL PROPERTY */
+/* HERO BANNERS OF ALL PAGES EXCEPT HOME_PAGE */
+/* BEST DEALS BOX */
+.property {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0em;
+  padding: 2em 8em;
+}
+.property .property-details {
+  width: 23%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  padding: 0em 1em;
+  border-radius: 10px;
+}
+.property .property-details li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0em;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 1.4em 0.5em;
+}
+.property .property-details li span {
+  font-size: 1.125rem;
+  color: black;
+  font-weight: 800;
+}
+.property .property-details li h4 {
+  font-weight: 500;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+.property .property-image {
+  width: 45%;
+}
+.property .property-image img {
+  width: 100%;
+}
+.property .property-extra-info {
+  width: 22%;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  gap: 2em;
+}
+.property .property-extra-info p {
+  color: rgba(33, 37, 41, 0.7490196078);
+  line-height: 1.8;
+}
+.property .property-extra-info .schedule-visit-link a {
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+}
+.property .property-extra-info .schedule-visit-link a i {
+  background-color: #f35525;
+  border-radius: 30px;
+  padding: 0.9em;
+  position: relative;
+  left: -1em;
+}
+.property .property-extra-info .schedule-visit-link a::before {
+  position: static;
+}
+.property .property-extra-info .schedule-visit-link a:hover {
+  color: #f35525;
+}
+.property .property-extra-info .schedule-visit-link a:hover i {
+  color: white;
+}
+.property .property-extra-info .schedule-visit-link a {
+  transition: all 0.2s linear;
+  padding: 0.9em;
+}
+.property .property-extra-info .schedule-visit-link a i {
+  padding: 1.1em;
+}
+
+/* FOOTER BLACK-LINE ENDING */
+/* QUESTIONS ABOUT THE PROPERTIES */
+/* INFORMATION ABOUT FULL PROPERTY IN A TOWER-LIKE CONTAINER */
+/* CONTACT FORM */
+/* PHONE AND EMAIL BOX SNIPPIT */
+img {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* --------HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 9999;
+}
+
+.sub-heading {
+  padding: 0.5em;
+  border-bottom: 1px solid #e9e9e9;
+}
+.sub-heading-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.sub-heading .email-and-address-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.sub-heading .email-and-address-container .email {
+  border-right: 1px solid #e9e9e9;
+}
+.sub-heading .email-and-address-container .email {
+  padding-right: 1.5em;
+}
+.sub-heading .email-and-address-container .address {
+  padding-left: 1.5em;
+}
+.sub-heading .email-and-address-container i {
+  font-size: 1.125rem;
+  color: #f35525;
+  margin-right: 0.5em;
+}
+.sub-heading .social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.sub-heading .social-links li a {
+  background-color: #aaa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 0.4em;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s linear;
+}
+.sub-heading .social-links li a:hover {
+  background-color: #f35525;
+}
+.sub-heading .social-links li a:hover i {
+  color: white;
+}
+.sub-heading .social-links li i {
+  color: white;
+}
+
+.logo-and-navbar {
+  border-bottom: 1px solid #e9e9e9;
+}
+.logo-and-navbar-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  background-color: white;
+  padding: 0.5em;
+}
+.logo-and-navbar .logo a {
+  color: black;
+}
+.logo-and-navbar .logo a h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+.logo-and-navbar .navbar {
+  font-size: 0.9rem;
+}
+.logo-and-navbar .navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0rem;
+  padding: 1em 0;
+}
+.logo-and-navbar .navbar ul li a {
+  color: black;
+  margin-left: 2em;
+  padding: 0.8em 1em;
+  transition: all 0.2s linear;
+  position: relative;
+  font-weight: 500;
+}
+.logo-and-navbar .navbar ul li a::before {
+  content: "";
+  background-color: #f35525;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s linear;
+}
+.logo-and-navbar .navbar ul li a:hover {
+  color: #f35525;
+}
+.logo-and-navbar .navbar ul li a:hover::before {
+  width: 100%;
+}
+.logo-and-navbar .navbar ul li:nth-child(2) a {
+  color: #f35525;
+}
+.logo-and-navbar .navbar ul li:last-child a {
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+}
+.logo-and-navbar .navbar ul li:last-child a i {
+  background-color: #f35525;
+  border-radius: 30px;
+  padding: 0.9em;
+  position: relative;
+  left: -1em;
+}
+.logo-and-navbar .navbar ul li:last-child a::before {
+  position: static;
+}
+.logo-and-navbar .navbar ul li:last-child a:hover {
+  color: #f35525;
+}
+.logo-and-navbar .navbar ul li:last-child a:hover i {
+  color: white;
+}
+.logo-and-navbar .dropdown {
+  position: absolute;
+  right: 10%;
+}
+.logo-and-navbar .dropdown i,
+.logo-and-navbar .dropdown input,
+.logo-and-navbar .dropdown ul {
+  display: none;
+}
+
+.hero {
+  background: url(../images/Properties/page-heading-bg.jpg);
+  background-size: cover;
+  background-position: 50%;
+}
+.hero .heading {
+  text-align: center;
+  padding: 7em 0em;
+}
+.hero .heading span {
+  font-weight: 500;
+  font-size: 0.9rem;
+  background-color: white;
+  padding: 0.8em 1.5em;
+}
+.hero .heading h1 {
+  font-weight: 800;
+  color: white;
+  font-size: 3.3rem;
+  margin-top: 0.5em;
+}
+
+.filter {
+  margin: 8em auto;
+}
+.filter .buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10em);
+  place-content: center;
+  gap: 1rem;
+}
+.filter .buttons input {
+  display: none;
+}
+.filter .buttons label {
+  display: block;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1em;
+  transition: color 0.2s linear, background-color 0.2s linear;
+}
+.filter .buttons label:hover {
+  transform: scale(0.99);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.filter .buttons input[type=radio]:checked + label {
+  background-color: #f35525;
+  color: white;
+}
+.filter .buttons label:hover {
+  color: #f35525;
+}
+
+.properties {
+  margin: 8em auto;
+}
+.properties .property-cards {
+  max-width: 1000px;
+  min-width: 280px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  place-content: center;
+  gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.properties .property-cards .card {
+  border-radius: 10px;
+  background-color: #fafafa;
+  padding: 2em;
+  min-width: 290px;
+}
+.properties .property-cards .card a img {
+  border-radius: 10px;
+  margin-bottom: 1em;
+  width: 100%;
+}
+.properties .property-cards .card .name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0em;
+}
+.properties .property-cards .card .name-price span {
+  background-color: #fbd9cf;
+  padding: 0.3em 1em;
+  font-size: 0.9rem;
+  color: black;
+}
+.properties .property-cards .card .name-price h4 {
+  font-size: 1.3rem;
+  color: #f35525;
+}
+.properties .property-cards .card .address {
+  font-size: 1.125rem;
+}
+.properties .property-cards .card .address h4 {
+  margin-top: 1.5em;
+}
+.properties .property-cards .card .address h4 a {
+  color: black;
+}
+.properties .property-cards .card .details {
+  border-bottom: 1px solid #e9e9e9;
+  padding: 1em 0em;
+}
+.properties .property-cards .card .details ul {
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.properties .property-cards .card .details ul li {
+  color: rgba(33, 37, 41, 0.7490196078);
+  margin-right: 1em;
+  line-height: 2;
+}
+.properties .property-cards .card .details ul li span {
+  color: black;
+  font-weight: 600;
+}
+.properties .property-cards .card .schedule-visit {
+  font-size: 0.9rem;
+  margin-top: 2em;
+  text-align: center;
+}
+.properties .property-cards .card .schedule-visit a {
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+}
+.properties .property-cards .card .schedule-visit a i {
+  background-color: #f35525;
+  border-radius: 30px;
+  padding: 0.9em;
+  position: relative;
+  left: -1em;
+}
+.properties .property-cards .card .schedule-visit a::before {
+  position: static;
+}
+.properties .property-cards .card .schedule-visit a:hover {
+  color: #f35525;
+}
+.properties .property-cards .card .schedule-visit a:hover i {
+  color: white;
+}
+.properties .property-cards .card .schedule-visit a {
+  font-weight: 500;
+  padding: 0.8em 1.8em;
+  transition: all 0.2s linear;
+}
+.properties .property-cards .card .schedule-visit a:hover {
+  background-color: #f35525;
+  color: white;
+}
+
+.page-numbers {
+  margin: 8em auto;
+}
+.page-numbers ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.page-numbers ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 2.5em;
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.2s linear;
+}
+.page-numbers ul li a:hover {
+  background-color: #f35525;
+}
+.page-numbers ul :nth-child(2) a {
+  background-color: #f35525;
+}
+
+footer .blackline {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 1em;
+}/*# sourceMappingURL=Properties.css.map */

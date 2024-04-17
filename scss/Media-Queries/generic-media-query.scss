@@ -1,0 +1,77 @@
+@use "../partials/allscss" as *;
+
+/* MAKE DROPDOWN ICON and MENU VISIBLE  */
+@media (0px <= width < 768px) {
+  .sub-heading {
+    display: none;
+  }
+
+  .logo-and-navbar {
+    &-content {
+      width: 90%;
+      padding: 0.8em 0;
+      .navbar {
+        display: none;
+      }
+    }
+    .dropdown {
+      position: initial;
+      display: block;
+
+      label > i {
+        display: block;
+      }
+
+      > ul {
+        height: 0%;
+        position: fixed;
+        background-color: $white-color;
+        left: 10%;
+        top: 4rem;
+        text-align: center;
+        width: 80%;
+        box-shadow: $box-shadow;
+        li {
+          border-top: $border;
+          padding: 1em;
+          a {
+            color: $black-color;
+            transition: $transition;
+
+            &:hover {
+              color: $pink-color;
+            }
+          }
+        }
+      }
+
+      input[type="checkbox"]:checked + label + ul {
+        display: block;
+        height: fit-content;
+      }
+    }
+  }
+}
+
+/* MAKE NAVIGATION BAR VISIBLE */
+@media (768px <= width <= 1082px) {
+  .sub-heading {
+    display: none;
+  }
+
+  .logo-and-navbar {
+    &-content {
+      width: 95%;
+      max-width: 770px;
+      .navbar {
+        ul {
+          li {
+            a {
+              margin-left: 0em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

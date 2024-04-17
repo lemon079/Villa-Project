@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../css/Properties.css" />
+    <link rel="stylesheet" href="../css/mq-Properties.css" />
+    <link rel="stylesheet" href="../css/generic-media-query.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sub-heading">
+        <div class="sub-heading-content">
+            <div class="email-and-address-container">
+                <div class="email">
+                    <i class="fa fa-envelope"></i>info@company.com
+                </div>
+                <div class="address">
+                    <i class="fa fa-map"></i>Sunny Isles Beach, FL 33160
+                </div>
+            </div>
+            <ul class="social-links">
+                <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo-and-navbar">
+            <div class="logo-and-navbar-content">
+                <div class="logo">
+                    <a href="#">
+                        <h1>VILLA</h1>
+                    </a>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="../html/Home_Page.html">Home</a></li>
+                        <li><a href="../html/Properties.html">Properties</a></li>
+                        <li><a href="../html/Property_Details.html">Property Details</a></li>
+                        <li><a href="../html/Contact_Us.html">Contact Us</a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-calendar"></i>Schedule a visit</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="dropdown">
+                    <input type="checkbox" name="dropdown-icon" id="dropdown-icon">
+                    <label for="dropdown-icon"><i class="fa fa-bars"
+                            style="color: #000000; font-size: 2rem;"></i></label>
+                    <ul>
+                        <li><a href="../html/Home_Page.html">Home</a></li>
+                        <li><a href="../html/Properties.html">Properties</a></li>
+                        <li><a href="../html/Property_Details.html">Property Details</a></li>
+                        <li><a href="../html/Contact_Us.html">Contact Us</a></li>
+                    </ul>
+                    </i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="heading">
+                <span>HOME / PROPERTIES</span>
+                <h1>PROPERTIES</h1>
+            </div>
+        </section>
+
+        <section class="filter">
+            <ul class="buttons">
+                <li>
+                    <input type="radio" name="btn" id="showAllBtn" class="btn" checked/>
+                    <label for="showAllBtn">Show All</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="btn" id="appartmentBtn" class="btn" />
+                    <label for="appartmentBtn">Appartment</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="btn" id="villaBtn" class="btn" />
+                    <label for="villaBtn">Villa House</label>
+                </li>
+
+                <li>
+                    <input type="radio" name="btn" id="penthouseBtn" class="btn" />
+                    <label for="penthouseBtn">Pent House</label>
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="properties">
+            <section class="property-cards">
+                <article class="card card__villa" id="card-1">
+                    <a href="#"><img src="../images/Home-Page/property-cards/property-01.jpg" alt="property-1"></a>
+                    <div class="name-price">
+                        <span>Luxury Villa</span>
+                        <h4>$2.265.000</h4>
+                    </div>
+                    <div class="address">
+                        <h4><a href="#">18 New Street Miami, OR 97219</a></h4>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Bedrooms: <span>8</span></li>
+                            <li>Bathrooms: <span>8</span></li>
+                            <li>Area: <span>545m2</span></li>
+                            <li>Floor: <span>3</span></li>
+                            <li>Parking: <span>6 spots</span></li>
+                        </ul>
+                    </div>
+                    <div class="schedule-visit">
+                        <a href="#">Schedule a visit</a>
+                    </div>
+                </article>
+                <article class="card card__villa" id="card-2">
+                    <a href="#"><img src="../images/Home-Page/Property-cards/property-02.jpg" alt="property-2"></a>
+                    <div class="name-price">
+                        <span>Luxury Villa</span>
+                        <h4>$1.180.000</h4>
+                    </div>
+                    <div class="address">
+                        <h4><a href="#">54 Mid Street Florida, OR 27001</a></h4>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Bedrooms: <span>6</span></li>
+                            <li>Bathrooms: <span>5</span></li>
+                            <li>Area: <span>450m2</span></li>
+                            <li>Floor: <span>3</span></li>
+                            <li>Parking: <span>8 spots</span></li>
+                        </ul>
+                    </div>
+                    <div class="schedule-visit">
+                        <a href="#">Schedule a visit</a>
+                    </div>
+                </article>
+                
+                <article class="card card__appartment" id="card-4">
+                    <a href="#"><img src="../images/Home-Page/Property-cards/property-04.jpg" alt="property-4"></a>
+                    <div class="name-price">
+                        <span>Appartment</span>
+                        <h4>$2.265.000</h4>
+                    </div>
+                    <div class="address">
+                        <h4><a href="#">12 New Street Miami, OR 12650</a></h4>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Bedrooms: <span>4</span></li>
+                            <li>Bathrooms: <span>3</span></li>
+                            <li>Area: <span>125m2</span></li>
+                            <li>Floor: <span>25th</span></li>
+                            <li>Parking: <span>2 cars</span></li>
+                        </ul>
+                    </div>
+                    <div class="schedule-visit">
+                        <a href="#">Schedule a visit</a>
+                    </div>
+                </article>
+
+                <article class="card card__villa" id="card-3">
+                    <a href="#"><img src="../images/Home-Page/Property-cards/property-03.jpg" alt="property-3"></a>
+                    <div class="name-price">
+                        <span>Luxury Villa</span>
+                        <h4>$1.460.000</h4>
+                    </div>
+                    <div class="address">
+                        <h4><a href="#">26 Old Street Miami, OR 38540</a></h4>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Bedrooms: <span>5</span></li>
+                            <li>Bathrooms: <span>4</span></li>
+                            <li>Area: <span>225m2</span></li>
+                            <li>Floor: <span>3</span></li>
+                            <li>Parking: <span>10 spots</span></li>
+                        </ul>
+                    </div>
+                    <div class="schedule-visit">
+                        <a href="#">Schedule a visit</a>
+                    </div>
+                </article>
+                <article class="card card__penthouse" id="card-5">
+                    <a href="#"><img src="../images/Home-Page/Property-cards/property-05.jpg" alt="property-5"></a>
+                    <div class="name-price">
+                        <span>Penthouse</span>
+                        <h4>$925.600</h4>
+                    </div>
+                    <div class="address">
+                        <h4><a href="#">34 Beach Street Miami, OR 42680</a></h4>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Bedrooms: <span>4</span></li>
+                            <li>Bathrooms: <span>4</span></li>
+                            <li>Area: <span>180m2</span></li>
+                            <li>Floor: <span>38th</span></li>
+                            <li>Parking: <span>2 cars</span></li>
+                        </ul>
+                    </div>
+                    <div class="schedule-visit">
+                        <a href="#">Schedule a visit</a>
+                    </div>
+                </article>
+                <article class="card card__appartment" id="card-6">
+                    <a href="#"><img src="../images/Home-Page/Property-cards/property-06.jpg" alt="property-6"></a>
+                    <div class="name-price">
+                        <span>Modern Condo</span>
+                        <h4>$450.000</h4>
+                    </div>
+                    <div class="address">
+                        <h4><a href="#">22 New Street Portland, OR 16540</a></h4>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Bedrooms: <span>3</span></li>
+                            <li>Bathrooms: <span>2</span></li>
+                            <li>Area: <span>165m2</span></li>
+                            <li>Floor: <span>26th</span></li>
+                            <li>Parking: <span>3 cars</span></li>
+                        </ul>
+                    </div>
+                    <div class="schedule-visit">
+                        <a href="#">Schedule a visit</a>
+                    </div>
+                </article>
+                <article class="card card__appartment" id="card-7">
+                    <a href="#"><img src="../images/Home-Page/Property-cards/property-04.jpg" alt="property-4"></a>
+                    <div class="name-price">
+                        <span>Appartment</span>
+                        <h4>$2.265.000</h4>
+                    </div>
+                    <div class="address">
+                        <h4><a href="#">12 New Street Miami, OR 12650</a></h4>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Bedrooms: <span>4</span></li>
+                            <li>Bathrooms: <span>3</span></li>
+                            <li>Area: <span>125m2</span></li>
+                            <li>Floor: <span>25th</span></li>
+                            <li>Parking: <span>2 cars</span></li>
+                        </ul>
+                    </div>
+                    <div class="schedule-visit">
+                        <a href="#">Schedule a visit</a>
+                    </div>
+                </article>
+                <article class="card card__penthouse" id="card-8">
+                    <a href="#"><img src="../images/Home-Page/Property-cards/property-05.jpg" alt="property-5"></a>
+                    <div class="name-price">
+                        <span>Penthouse</span>
+                        <h4>$925.600</h4>
+                    </div>
+                    <div class="address">
+                        <h4><a href="#">34 Beach Street Miami, OR 42680</a></h4>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Bedrooms: <span>4</span></li>
+                            <li>Bathrooms: <span>4</span></li>
+                            <li>Area: <span>180m2</span></li>
+                            <li>Floor: <span>38th</span></li>
+                            <li>Parking: <span>2 cars</span></li>
+                        </ul>
+                    </div>
+                    <div class="schedule-visit">
+                        <a href="#">Schedule a visit</a>
+                    </div>
+                </article>
+                <article class="card card__appartment" id="card-9">
+                    <a href="#"><img src="../images/Home-Page/Property-cards/property-06.jpg" alt="property-6"></a>
+                    <div class="name-price">
+                        <span>Modern Condo</span>
+                        <h4>$450.000</h4>
+                    </div>
+                    <div class="address">
+                        <h4><a href="#">22 New Street Portland, OR 16540</a></h4>
+                    </div>
+                    <div class="details">
+                        <ul>
+                            <li>Bedrooms: <span>3</span></li>
+                            <li>Bathrooms: <span>2</span></li>
+                            <li>Area: <span>165m2</span></li>
+                            <li>Floor: <span>26th</span></li>
+                            <li>Parking: <span>3 cars</span></li>
+                        </ul>
+                    </div>
+                    <div class="schedule-visit">
+                        <a href="#">Schedule a visit</a>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <section class="page-numbers">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">>></a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="blackline">---------------------------------</div>
+    </footer>
+      
+</body>
+
+<script src="../js/Properties.js"></script>
+
+</html>

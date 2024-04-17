@@ -1,0 +1,445 @@
+@use "partials/allscss" as *;
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-stack;
+  scroll-behavior: smooth;
+}
+
+/* --------HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 9999;
+}
+
+.sub-heading {
+  padding: 0.5em;
+  border-bottom: $border;
+
+  &-content {
+    @include displayFlex(row, space-between, center, 0rem);
+    width: 80%;
+    margin: 0 auto;
+  }
+  .email-and-address-container {
+    @include displayFlex(row, center, center, 0rem);
+    font-size: $small-fsize;
+    color: $lightgrey-color;
+
+    .email {
+      border-right: $border;
+    }
+
+    .email {
+      padding-right: 1.5em;
+    }
+
+    .address {
+      padding-left: 1.5em;
+    }
+
+    & i {
+      font-size: $secondary-fsize;
+      color: $orange-color;
+      margin-right: 0.5em;
+    }
+  }
+
+  .social-links {
+    @include displayFlex(row, flex-end, center, 1rem);
+
+    li {
+      a {
+        background-color: $lightgrey-color;
+        @include displayFlex(row, center, center, 0);
+        padding: 0.4em;
+        border-radius: map-get($border-radius, "30px");
+        width: 30px;
+        height: 30px;
+        transition: $transition;
+
+        &:hover {
+          background-color: $orange-color;
+
+          i {
+            color: $white-color;
+          }
+        }
+      }
+
+      i {
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.logo-and-navbar {
+  border-bottom: $border;
+
+  &-content {
+    width: 80%;
+    margin: 0 auto;
+    @include displayFlex(row, space-between, center, 0rem);
+    background-color: $white-color;
+    padding: 0.5em;
+  }
+
+  .logo {
+    a {
+      color: $black-color;
+
+      h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        font-weight: map-get($font-weight, "bold-800");
+      }
+    }
+  }
+
+  .navbar {
+    font-size: $small-fsize;
+    ul {
+      @include displayFlex(row, space-between, center, 0rem);
+      padding: 1em 0;
+      li {
+        a {
+          color: $black-color;
+          margin-left: 2em;
+          padding: 0.8em 1em;
+          transition: $transition;
+          position: relative;
+          font-weight: map-get($font-weight, "bold-500");
+
+          &::before {
+            content: "";
+            background-color: $orange-color;
+            width: 0%;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: $transition;
+          }
+
+          &:hover {
+            color: $orange-color;
+
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+
+        &:first-child {
+          a {
+            color: $orange-color;
+          }
+        }
+
+        &:last-child {
+          @include scheduleVisitLink;
+        }
+      }
+    }
+  }
+  
+  .dropdown {
+    position: absolute;
+    right: 10%;
+    i,
+    input,
+    ul {
+      display: none;
+    }
+  }
+}
+
+.hero {
+  font-size: $small-fsize;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  gap: 1em;
+  scroll-snap-type: x mandatory;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero-content {
+    color: $white-color;
+    scroll-snap-align: center;
+
+    .text-container {
+      padding: 10em 0;
+      @include displayFlex(column, normal, normal, 2rem);
+      line-height: $line-height;
+      padding-right: 60em;
+      padding-left: 10em;
+
+      span {
+        padding: 0.5em 1em;
+        width: fit-content;
+        color: $black-color;
+        background-color: $white-color;
+        font-weight: map-get($font-weight, "bold-600");
+
+        em {
+          font-style: normal;
+          color: $orange-color;
+        }
+      }
+
+      h2 {
+        font-size: $Hero-fsize;
+        line-height: $line-height - 0.3;
+      }
+    }
+  }
+
+  #hero-content-1 {
+    background: url(../images/Home-Page/Hero/hero-image-1.jpg);
+  }
+
+  #hero-content-2 {
+    background: url(../images/Home-Page/Hero/hero-image-2.jpg);
+  }
+
+  #hero-content-3 {
+    background: url(../images/Home-Page/Hero/hero-image-3.jpg);
+  }
+
+  #hero-content-1,
+  #hero-content-2,
+  #hero-content-3 {
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: cover;
+  }
+}
+
+.appartment-and-seaview {
+  @include displayFlex(row, center, flex-start, 1rem);
+  margin: $margin-horizontal auto;
+  width: 80%;
+
+  .img-container {
+    position: relative;
+
+    > img {
+      width: 18.5em;
+    }
+
+    a {
+      @include displayFlex(row, center, center, 0rem);
+      position: absolute;
+      background-color: $orange-color;
+      padding: 1.2em;
+      bottom: -2.5em;
+      left: -3em;
+      border-radius: 50px;
+      transition: box-shadow 0.2s;
+      &:hover {
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+
+  .text-container {
+    @include displayFlex(column, space-evenly, normal, 3rem);
+    width: 40%;
+
+    .heading {
+      width: 70%;
+      @include h2-heading;
+    }
+
+    .questions-container {
+      @include property-questions;
+    }
+  }
+
+  .info-list-container {
+    @include property-information-tower;
+    margin-left: 2em;
+  }
+}
+
+.video-content {
+  background: url(../images/Home-Page/Video/video-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .content {
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+    .heading {
+      width: 25%;
+      margin: 0 auto;
+      @include h2-heading;
+
+      h2 {
+        color: $white-color;
+      }
+    }
+  }
+
+  .video {
+    width: 65%;
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+
+    img {
+      border-radius: map-get($border-radius, "10px");
+      width: 100%;
+      position: relative;
+    }
+
+    a {
+      position: absolute;
+      top: 10em;
+      left: 24em;
+      border-radius: 50px;
+      background-color: white;
+      color: #f35525;
+      padding: 0.7em 1em;
+      font-size: 1.1rem;
+      outline: 15px solid rgba(243, 85, 37, 0.45);
+    }
+  }
+}
+
+.fun-facts {
+  @include displayFlex(row, space-between, normal, 0rem);
+  margin: $margin-horizontal auto;
+  width: 80%;
+
+  .fact {
+    @include displayFlex(row, center, center, 2rem);
+    padding: 1.3em 1em;
+    width: 18em;
+    background-color: #ffeee9;
+    border-radius: map-get($border-radius, "10px");
+    position: relative;
+
+    h2 {
+      color: $orange-color;
+      display: inline-block;
+      font-size: $subheading-fsize;
+    }
+
+    span {
+      color: $lightblack-color;
+      font-weight: map-get($font-weight, "bold-600");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1.5em;
+      right: -1.5em;
+      padding: 1.5em;
+      border-radius: 40px;
+      background-color: $orange-color;
+    }
+  }
+}
+
+.best-deals {
+  @include best-deals;
+}
+
+.properties-card-container {
+  width: 80%;
+  margin: 0 auto;
+  .heading {
+    @include h2-heading;
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+  }
+
+  .property-cards {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20em);
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
+    .card {
+      @include propertyCards;
+    }
+  }
+}
+
+.contact-us {
+  margin: $margin-horizontal auto;
+  background: url(../images/Home-Page/Contact/contact-bg.jpg) no-repeat;
+  position: relative;
+  background-size: contain;
+  .heading {
+    padding: 5em 0;
+    text-align: center;
+    @include h2-heading;
+    h2 {
+      color: $white-color;
+    }
+  }
+
+  .map-and-form {
+    @include displayFlex(row, center, flex-start, 3rem);
+    position: relative;
+    left: 0em;
+
+    .map-and-phone-email {
+      @include displayFlex(column, normal, normal, 3rem);
+
+      iframe {
+        box-shadow: $box-shadow;
+      }
+
+      .phone-email {
+        @include displayFlex(row, space-between, normal, 3rem);
+
+        .box {
+          @include phone-email-box;
+        }
+      }
+    }
+
+    .form {
+      @include form;
+    }
+  }
+}
+
+footer {
+  .blackline {
+    @include blackline;
+  }
+}

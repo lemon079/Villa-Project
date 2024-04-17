@@ -1,0 +1,169 @@
+/* FONT COLORS */
+/* Font Family */
+/* FONT SIZES */
+/* FONT BOLD */
+/* Border */
+/* MARGIN BETWEEN EACH SECTION */
+/* BOX SHADOW OF CONTAINERS */
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+/* FLEX-BOX SNIPPIT */
+/* HEADINGS SNIPPIT */
+/* SCHEDULE A VISIT. LINK SNIPPIT */
+/* RADIO-BUTTONS */
+/* TYPE OF PROPERTY */
+/* PROPERTY CARDS/BOXES */
+/* FULL PROPERTY */
+/* HERO BANNERS OF ALL PAGES EXCEPT HOME_PAGE */
+/* BEST DEALS BOX */
+.property {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0em;
+  padding: 2em 8em;
+}
+.property .property-details {
+  width: 23%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  padding: 0em 1em;
+  border-radius: 10px;
+}
+.property .property-details li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0em;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 1.4em 0.5em;
+}
+.property .property-details li span {
+  font-size: 1.125rem;
+  color: black;
+  font-weight: 800;
+}
+.property .property-details li h4 {
+  font-weight: 500;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+.property .property-image {
+  width: 45%;
+}
+.property .property-image img {
+  width: 100%;
+}
+.property .property-extra-info {
+  width: 22%;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  gap: 2em;
+}
+.property .property-extra-info p {
+  color: rgba(33, 37, 41, 0.7490196078);
+  line-height: 1.8;
+}
+.property .property-extra-info .schedule-visit-link a {
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+}
+.property .property-extra-info .schedule-visit-link a i {
+  background-color: #f35525;
+  border-radius: 30px;
+  padding: 0.9em;
+  position: relative;
+  left: -1em;
+}
+.property .property-extra-info .schedule-visit-link a::before {
+  position: static;
+}
+.property .property-extra-info .schedule-visit-link a:hover {
+  color: #f35525;
+}
+.property .property-extra-info .schedule-visit-link a:hover i {
+  color: white;
+}
+.property .property-extra-info .schedule-visit-link a {
+  transition: all 0.2s linear;
+  padding: 0.9em;
+}
+.property .property-extra-info .schedule-visit-link a i {
+  padding: 1.1em;
+}
+
+/* FOOTER BLACK-LINE ENDING */
+/* QUESTIONS ABOUT THE PROPERTIES */
+/* INFORMATION ABOUT FULL PROPERTY IN A TOWER-LIKE CONTAINER */
+/* CONTACT FORM */
+/* PHONE AND EMAIL BOX SNIPPIT */
+/* MAKE DROPDOWN ICON and MENU VISIBLE  */
+@media (0px <= width < 768px) {
+  .sub-heading {
+    display: none;
+  }
+  .logo-and-navbar-content {
+    width: 90%;
+    padding: 0.8em 0;
+  }
+  .logo-and-navbar-content .navbar {
+    display: none;
+  }
+  .logo-and-navbar .dropdown {
+    position: initial;
+    display: block;
+  }
+  .logo-and-navbar .dropdown label > i {
+    display: block;
+  }
+  .logo-and-navbar .dropdown > ul {
+    height: 0%;
+    position: fixed;
+    background-color: white;
+    left: 10%;
+    top: 4rem;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  }
+  .logo-and-navbar .dropdown > ul li {
+    border-top: 1px solid #e9e9e9;
+    padding: 1em;
+  }
+  .logo-and-navbar .dropdown > ul li a {
+    color: black;
+    transition: all 0.2s linear;
+  }
+  .logo-and-navbar .dropdown > ul li a:hover {
+    color: #ee626b;
+  }
+  .logo-and-navbar .dropdown input[type=checkbox]:checked + label + ul {
+    display: block;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+/* MAKE NAVIGATION BAR VISIBLE */
+@media (768px <= width <= 1082px) {
+  .sub-heading {
+    display: none;
+  }
+  .logo-and-navbar-content {
+    width: 95%;
+    max-width: 770px;
+  }
+  .logo-and-navbar-content .navbar ul li a {
+    margin-left: 0em;
+  }
+}/*# sourceMappingURL=generic-media-query.css.map */

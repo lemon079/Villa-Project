@@ -1,0 +1,485 @@
+@use "fonts" as *;
+@use "color" as *;
+@use "transitions" as *;
+@use "layout" as *;
+
+/* FLEX-BOX SNIPPIT */
+@mixin displayFlex($f-direction, $x-adjust, $y-adjust, $gap) {
+  display: flex;
+  flex-direction: $f-direction;
+  justify-content: $x-adjust;
+  align-items: $y-adjust;
+  gap: $gap;
+}
+
+/* HEADINGS SNIPPIT */
+@mixin h2-heading {
+  h6 {
+    font-size: $small-fsize;
+    color: $pink-color;
+  }
+
+  h2 {
+    font-size: $subheading-fsize;
+    margin-top: 0.3em;
+  }
+}
+
+/* SCHEDULE A VISIT. LINK SNIPPIT */
+
+@mixin scheduleVisitLink {
+  a {
+    border-radius: 30px;
+    background-color: $black-color;
+    color: $white-color;
+    i {
+      background-color: $orange-color;
+      border-radius: 30px;
+      padding: 0.9em;
+      position: relative;
+      left: -1em;
+    }
+    &::before {
+      position: static;
+    }
+    &:hover {
+      color: $orange-color;
+      i {
+        color: $white-color;
+      }
+    }
+  }
+}
+
+/* RADIO-BUTTONS */
+
+@mixin buttons {
+  input {
+    display: none;
+  }
+
+  label {
+    display: block;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    color: $white-color;
+    background-color: $black-color;
+    font-size: $small-fsize;
+    font-weight: map-get($font-weight, "bold-600");
+    padding: 1em;
+    transition: color 0.2s linear, background-color 0.2s linear;
+
+    &:hover {
+      transform: scale(0.99);
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: $orange-color;
+    color: white;
+    
+  }
+}
+
+/* TYPE OF PROPERTY */
+@mixin property-tag {
+  background-color: $lightpink1-color;
+  padding: 0.3em 1em;
+  font-size: $small-fsize;
+  color: $black-color;
+}
+
+
+/* PROPERTY CARDS/BOXES */
+@mixin propertyCards {
+  border-radius: 10px;
+  background-color: $greyishwhite-color;
+  padding: 2em;
+
+  a {
+    img {
+      border-radius: 10px;
+      margin-bottom: 1em;
+      width: 100%;
+    }
+  }
+
+  .name-price {
+    @include displayFlex(row, space-between, center, 0em);
+    span {
+      @include property-tag;
+    }
+
+    h4 {
+      font-size: $primary-fsize;
+      color: $orange-color;
+    }
+  }
+
+  .address {
+    font-size: $secondary-fsize;
+    h4 {
+      margin-top: 1.5em;
+      a {
+        color: $black-color;
+      }
+    }
+  }
+
+  .details {
+    border-bottom: $border;
+    padding: 1em 0em;
+    ul {
+      font-size: $small-fsize;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        color: $lightblack-color;
+        margin-right: 1em;
+        line-height: $line-height + 0.5;
+
+        span {
+          color: $black-color;
+          font-weight: map-get($font-weight, "bold-600");
+        }
+      }
+    }
+  }
+
+  .schedule-visit {
+    @include scheduleVisitLink;
+    font-size: $small-fsize;
+    margin-top: 2em;
+    text-align: center;
+    a {
+      font-weight: map-get($font-weight, "bold-500");
+      padding: 0.8em 1.8em;
+      transition: $transition;
+
+      &:hover {
+        background-color: $orange-color;
+        color: $white-color;
+      }
+    }
+  }
+}
+
+
+/* FULL PROPERTY */
+@mixin fullProperty {
+  @include displayFlex(row, space-between, flex-start, 0em);
+  padding: 2em 8em;
+
+  .property-details {
+    width: 23%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    padding: 0em 1em;
+    border-radius: map-get($border-radius, "10px");
+    li {
+      @include displayFlex(row, space-between, center, 0em);
+      border-bottom: $border;
+      padding: 1.4em 0.5em;
+
+      span {
+        font-size: $secondary-fsize;
+        color: $black-color;
+        font-weight: map-get($font-weight, "bold-800");
+      }
+
+      h4 {
+        font-weight: map-get($font-weight, "bold-500");
+        color: $lightgrey-color;
+        font-size: $small-fsize;
+      }
+    }
+  }
+
+  .property-image {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .property-extra-info {
+    width: 22%;
+    font-size: $small-fsize;
+    @include displayFlex(column, normal, normal, 2em);
+
+    p {
+      color: $lightblack-color;
+      line-height: 1.8;
+    }
+    .schedule-visit-link {
+      @include scheduleVisitLink;
+      a {
+        transition: $transition;
+        padding: 0.9em;
+        i {
+          padding: 1.1em;
+        }
+      }
+    }
+  }
+}
+
+/* HERO BANNERS OF ALL PAGES EXCEPT HOME_PAGE */
+@mixin hero($url) {
+  background: $url;
+  background-size: cover;
+  background-position: 50%;
+
+  .heading {
+    text-align: center;
+    padding: 7em 0em;
+
+    span {
+      font-weight: map-get($font-weight, "bold-500");
+      font-size: $small-fsize;
+      background-color: $white-color;
+      padding: 0.8em 1.5em;
+    }
+
+    h1 {
+      font-weight: map-get($font-weight, "bold-800");
+      color: $white-color;
+      font-size: $Hero-fsize - 0.5;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+
+/* BEST DEALS BOX */
+@mixin best-deals {
+  background-color: $greyishwhite-color;
+  margin: $margin-horizontal auto;
+  @include displayFlex(column, center, center, 0em);
+
+  .heading-button-container {
+    @include displayFlex(row, space-between, flex-end, 0em);
+    padding: 4em 8em;
+    margin: 0 auto;
+
+    .heading {
+      width: 30%;
+      @include h2-heading;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(3,10em);
+      place-content: center;
+      gap: 1em;
+}
+      @include buttons;
+    }
+  }
+
+  .property {
+    @include displayFlex(row, space-between, flex-start, 0em);
+    padding: 2em 8em;
+
+    .property-details {
+      width: 23%;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+      padding: 0em 1em;
+      border-radius: map-get($border-radius, "10px");
+      li {
+        @include displayFlex(row, space-between, center, 0em);
+        border-bottom: $border;
+        padding: 1.4em 0.5em;
+
+        span {
+          font-size: $secondary-fsize;
+          color: $black-color;
+          font-weight: map-get($font-weight, "bold-800");
+        }
+
+        h4 {
+          font-weight: map-get($font-weight, "bold-500");
+          color: $lightgrey-color;
+          font-size: $small-fsize;
+        }
+      }
+    }
+
+    .property-image {
+      width: 45%;
+      img {
+        width: 100%;
+      }
+    }
+
+    .property-extra-info {
+      width: 22%;
+      font-size: $small-fsize;
+      @include displayFlex(column, normal, normal, 2em);
+
+      p {
+        color: $lightblack-color;
+        line-height: 1.8;
+      }
+      .schedule-visit-link {
+        @include scheduleVisitLink;
+        a {
+          transition: $transition;
+          padding: 0.9em;
+          i {
+            padding: 1.1em;
+          }
+        }
+      }
+    }
+  }
+
+/* FOOTER BLACK-LINE ENDING */
+@mixin blackline {
+  background-color: $black-color;
+  color: $white-color;
+  text-align: center;
+  padding-top: 1em;
+}
+
+/* QUESTIONS ABOUT THE PROPERTIES */
+@mixin property-questions {
+  .questions {
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    label {
+      font-weight: map-get($font-weight, "bold-500");
+    }
+    label,
+    p {
+      background-color: $greyishwhite-color;
+      display: block;
+      padding: 0.8em 1em;
+      border-bottom: $border;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: $small-fsize;
+      display: none;
+      cursor: default;
+
+      a {
+        color: $blue-color;
+      }
+
+      code {
+        color: $pink-color;
+      }
+    }
+
+    input[type="checkbox"]:checked + label {
+      color: $orange-color;
+
+      + p {
+        display: block;
+      }
+    }
+  }
+}
+
+/* INFORMATION ABOUT FULL PROPERTY IN A TOWER-LIKE CONTAINER */
+@mixin property-information-tower {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  border-radius: map-get($border-radius, "10px");
+  padding: 0em 2em;
+
+  .info-items {
+    border-bottom: $border;
+    padding: 2.2em 0;
+    @include displayFlex(row, flex-start, center, 1em);
+    img {
+      width: 3em;
+      height: 100%;
+    }
+
+    h4 {
+      font-weight: map-get($font-weight, "bold-600");
+      font-size: $primary-fsize;
+
+      span {
+        font-size: $small-fsize;
+        color: $lightgrey-color;
+        font-weight: map-get($font-weight, "bold-400");
+      }
+    }
+  }
+}
+
+
+/* CONTACT FORM */
+@mixin form{
+  
+  padding: 1.5em;
+  border-radius: map-get($border-radius, "10px");
+  border: 1px solid white;
+  background-color: $white-color;
+  height: fit-content;
+  div {
+    @include displayFlex(column, normal, normal, 0.5em);
+    margin-bottom: 1.5em;
+
+    label {
+      font-size: $small-fsize;
+    }
+
+    input,
+    textarea {
+      background-color: #f6f6f6;
+      padding: 0.8em 1em;
+      border-radius: map-get($border-radius, "30px");
+      border: 0;
+      font-size: $secondary-fsize;
+
+      &::-webkit-input-placeholder {
+        font-size: $small-fsize;
+      }
+    }
+
+    button {
+      margin-top: 1em;
+      width: fit-content;
+      padding: 1.2em 2em;
+      background-color: $black-color;
+      color: $white-color;
+      font-size: $small-fsize;
+      border-radius: map-get($border-radius, "30px");
+      font-weight: map-get($font-weight, "bold-700");
+      transition: $transition;
+      border: 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $orange-color;
+      }
+    }
+  }
+}
+
+
+/* PHONE AND EMAIL BOX SNIPPIT */
+@mixin phone-email-box{
+  @include displayFlex(row, normal, center, 1em);
+  padding: 1.5em 2em;
+  box-shadow: $box-shadow;
+  border-radius: map-get($border-radius, "10px");
+
+  h4 {
+    font-weight: map-get($font-weight, "bold-600");
+    font-size: $primary-fsize;
+  }
+
+  span {
+    color: $lightgrey-color;
+  }
+}

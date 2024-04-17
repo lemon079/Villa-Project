@@ -1,0 +1,94 @@
+@use "../partials/allscss" as *;
+
+/* FOR dropdown of all breakpoints of this web-page*/
+.logo-and-navbar{
+  .dropdown ul > li:nth-child(3){
+    a {
+      color: $pink-color;
+    }
+  }
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (0px <= width < 1240px) {
+    .hero {
+      background-size: auto;
+      .heading {
+        h1 {
+          font-size: $Hero-fsize - 0.8rem;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .single-property {
+      gap: 3em;
+      grid-template-columns: 1fr;
+      max-width: 540px;
+
+      .col {
+        width: auto;
+        margin: 0 auto;
+        .main-content {
+          h4 {
+            padding-bottom: 1em;
+          }
+        }
+      }
+    }
+
+    .best-deals {
+      padding: 5em 0;
+      gap: 2rem;
+
+      .heading-button-container,
+      .property-container {
+        max-width: 840px;
+        margin: 0 auto;
+      }
+
+      .heading-button-container {
+        padding: 0;
+        flex-direction: column;
+        align-items: normal;
+        text-align: center;
+        gap: 2rem;
+
+        .heading {
+          width: auto;
+        }
+
+        .buttons {
+          grid-template-columns: repeat(auto-fit, 8em);
+
+          // li:nth-child(3) {
+          //   a {
+          //     background-color: red;
+          //     text-align: center;
+          //   }
+          // }
+        }
+      }
+
+      .property-container {
+        gap: 1rem;
+        .property {
+          padding: 0;
+          flex-direction: column;
+          gap: 1rem;
+
+          .property-details,
+          .property-extra-info {
+            width: 90%;
+            margin: 0 auto;
+          }
+
+          .property-image {
+            width: 90%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+}
